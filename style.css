@@ -4,13 +4,78 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   background: #252525;
+}
+
+h2 {
+  color: #fefefe;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+#loadingText {
+  animation: animateLoadingText 10s 1 forwards;
+}
+
+#doneText {
+  line-height: 0%;
+  opacity: 0%;
+  animation: animateDoneText 10s 1 forwards;
+}
+
+.progress-bar__container {
+  position: relative;
+  width: 80vw;
+  max-width: 800px;
+  height: 15px;
+  background-color: #fefefe;
+  border-radius: 15px;
+}
+
+.progress-bar__meter {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: rgba(77, 77, 247, 0.921);
+  border-radius: 15px;
+  animation: animateBar 10s 1 ease-in-out forwards;
+}
+
+h5 {
+  position: absolute;
+  bottom: 10px;
+  color: #fefefe;
+  font-weight: lighter;
+}
+
+@keyframes animateBar {
+  0% { width: 0% }
+  10% { width: 15% }
+  40% { width: 60% }
+  75% { width: 90% }
+  95% { width: 98%; }
+  99% { background-color: blue }
+  100% { width: calc(100% - 4px); background-color: green }
+}
+
+@keyframes animateLoadingText {
+  99% { opacity: 100%; line-height: 100%; }
+  100% { opacity: 0%; line-height: 0%; }
+}
+
+@keyframes animateDoneText {
+  99% { opacity: 0%; line-height: 0%; }
+  100% { opacity: 100%; line-height: 100%; }
 }
