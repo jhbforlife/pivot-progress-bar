@@ -1,6 +1,4 @@
 # pivot-progress-bar
- pivot progress bar project
-
 my third project for the pre-work section of the pivot program! I took inspiration from one of my peers, Anthony Tennyson (<a href="https://symphonious-biscochitos-4b5c13.netlify.app/">project here</a>), but added my own spin to it!
 
 as I begin learning javascript, I'm sure I could make this even better! as it is, I am happy with how it came out!
